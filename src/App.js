@@ -1,12 +1,17 @@
 import React from 'react';
 import './App.css';
+import { MovieProvider } from './MovieContext';
 import MovieList from './Movielist';
+import Nav from './Nav';
 
 function App() {
   return (
-    <div className="App">
-      <MovieList />
-    </div>
+    <MovieProvider>
+      <div className="App">
+        <Nav />
+        <MovieList />
+      </div>
+    </MovieProvider>
   );
 }
 
